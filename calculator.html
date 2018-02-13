@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="uft-8">
+  <title>Calculadora Basica</title>
+  <style type="text/css">
+    .titilar {
+        animation: blink-animation 1s steps(5, start) infinite;
+        -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    }
+    @keyframes blink-animation {
+      to {
+          visibility: hidden;
+         }
+    }
+    @-webkit-keyframes blink-animation {
+      to {
+          visibility: hidden;
+         }
+    }
+    h1 {
+     color:#666666;
+     font-size: 40px;
+    }
+  </style>
+  <script type="text/javascript">
+    function cuadrada() {
+      var num = document.getElementById("n1");
+      num.value = Math.pow(num.value, 4);
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1 class="titilar">Calculadora Basica de Daniel Rondón</h1>
+  </header>
+  Number:
+  <input type="text" id="n1"><p></p>
+  <button onclick="cuadrada()"> X^4 </button>
+</body>
+</html>
